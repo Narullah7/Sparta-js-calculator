@@ -1,5 +1,5 @@
 
-var WelcomeMessage = prompt("Which calculator would you like to use. Type a for basic, b for basic and m for BMI")
+var WelcomeMessage = prompt("Which calculator would you like to use. Type a for basic, b for advanced and m for BMI")
 
 if ( WelcomeMessage == "a") {
   var a = prompt("Enter your first number");
@@ -34,6 +34,27 @@ if ( WelcomeMessage == "a") {
 console.log("hey");
 }
 
-if () {
+if (WelcomeMessage == "b") {
+var op = prompt("Please choose from the following square-root or power");
 
+switch (op) {
+  case "square root":
+  var a = prompt("Please enter your number");
+  if (a < 0) {
+    alert("You cannot square-root a minus number")
+  } else if (a >= 0) {
+    var squareroot = Math.sqrt(a);
+    alert("Your answer is " + squareroot);
+  }
+  break;
+  case "power":
+  var a = prompt("please choose your base number");
+  var b = prompt("please choose your exponent");
+  var power = Math.pow(a,b);
+  alert("Your answer is " + power);
+  break;
+  default:
+  alert("Something went wrong!");
+
+}
 }
