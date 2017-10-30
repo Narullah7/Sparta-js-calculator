@@ -1,5 +1,5 @@
 
-var WelcomeMessage = prompt("Which calculator would you like to use. Type a for basic, b for advanced and m for BMI")
+var WelcomeMessage = prompt("Which calculator would you like to use. Type a for basic, b for advanced, m for BMI and t for trip calculator")
 
 if ( WelcomeMessage == "a") {
   var a = prompt("Enter your first number");
@@ -8,11 +8,11 @@ if ( WelcomeMessage == "a") {
 
   switch (op) {
     case "*":
-    var multiply = a*b;
+    var multiply = parseInt(a)*parseInt(b);
     alert("Your answer is " + multiply);
     break;
     case "/":
-    var divide = a/b;
+    var divide = parseInt(a)/parseInt(b);
     if ( b =="0") {
       alert("Error!, Cannot divide by 0");
     }else if (b != 0) {
@@ -20,11 +20,11 @@ if ( WelcomeMessage == "a") {
     }
     break;
     case "+":
-    var add = a+b;
+    var add = parseInt(a)+parseInt(b);
     alert("Your answer is " + add);
     break;
     case "-":
-    var minus = a-b;
+    var minus = parseInt(a)-parseInt(b);
     alert("Your answer is " + minus);
     break;
     default:
@@ -65,4 +65,23 @@ if (WelcomeMessage == "m") {
   var hsqr = Math.pow(b,2);
   var bmi = a / hsqr;
   alert("Your BMI is " + bmi);
+}
+
+if (WelcomeMessage == "t") {
+  var mpg = prompt("Enter your fuel efficiency(mpg)");
+  var cost = prompt("Enter your cost per gallon");
+  var distance = prompt("Enter the distance travelled");
+  var speed = prompt("Enter your speed(in hours)");
+
+  var time = (parseInt(distance)) / (parseInt(speed));
+  var totcost = parseInt(mpg) * parseFloat(cost);
+
+  if (distance > "60") {
+    var diff = (parseInt(distance) - 60)*2;
+    var Nmpg = (parseInt(mpg) - diff) * cost;
+    alert("Your trip will take " + time + "hours and will cost: £ " +Nmpg );
+  } else {
+    alert("Your trip will take " + time + "hours and will cost: £" + totcost)
+  }
+
 }
