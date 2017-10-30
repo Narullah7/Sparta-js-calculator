@@ -58,3 +58,11 @@ switch (op) {
 
 }
 }
+
+if (WelcomeMessage == "m") {
+  var a = prompt("please enter your weight(kg)");
+  var b = prompt("please enter your height(m)")
+  var hsqr = Math.pow(b,2);
+  var bmi = a / hsqr;
+  alert("Your BMI is " + bmi);
+}
