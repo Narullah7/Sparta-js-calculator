@@ -62,8 +62,9 @@ switch (op) {
 if (WelcomeMessage == "m") {
   var a = prompt("please enter your weight(kg)");
   var b = prompt("please enter your height(m)")
-  var hsqr = Math.pow(b,2);
-  var bmi = a / hsqr;
+  var heimet = parseFloat(b);
+  var hsqr = Math.pow(heimet,2);
+  var bmi = parseInt(a) / hsqr;
   alert("Your BMI is " + bmi);
 }
 
@@ -83,5 +84,4 @@ if (WelcomeMessage == "t") {
   } else {
     alert("Your trip will take " + time + "hours and will cost: £" + totcost)
   }
-
-}
+  }
