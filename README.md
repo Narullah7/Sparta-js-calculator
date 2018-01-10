@@ -1,6 +1,6 @@
 # Brief
 I created a basic JavaScript page which would run a calculator simulation i.e.
-addition, subtraction, multiplication, division, powers, square-roots, BMI and a trip calculator.
+addition, subtraction, multiplication, division, powers, square-roots, BMI.
 the numbers came from the users input.
 
 # Difficulties
@@ -11,4 +11,4 @@ was returning something wrong, I then noticed that I was adding a string to a nu
 * I am most pleased that my calculator runs properly and displays the correct answer
 for each part of the calculator.
 * I learnt a lot from this homework, I learnt a lot from my mistakes which will help
-me not to make them in the future. 
+me not to make them in the future.
